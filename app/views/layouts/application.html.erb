@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="easy-sidebar-active">
   <head>
     <title>ShopGogo</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <!-- aaa -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      //easy-sidebar-toggle-right
+      $('.easy-sidebar-toggle').click(function(e) {
+      e.preventDefault();
+      //$('body').toggleClass('toggled-right');
+      $('body').toggleClass('toggled');
+      //$('.navbar.easy-sidebar-right').removeClass('toggled-right');
+      $('.navbar.easy-sidebar').removeClass('toggled');
+      });
+    </script>
   </head>
   <%= csrf_meta_tags %>
 </head>
