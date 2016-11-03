@@ -15,4 +15,15 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap/dropdown
 //= require_tree .
+
+$(function() {
+  $('.easy-sidebar-toggle').click(function(e) {
+    e.preventDefault();
+  //$('body').toggleClass('toggled-right');
+    $('body').toggleClass('toggled');
+  //$('.navbar.easy-sidebar-right').removeClass('toggled-right');
+    $('.navbar.easy-sidebar').removeClass('toggled');
+  });
+});

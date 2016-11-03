@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+u = User.new
+u.email = "admin@gmail.com"
+# 可以改成自己的 email
+u.password = "adminadmin"
+# 最少要八碼
+u.password_confirmation = "adminadmin"
+# 最少要八碼
+u.is_admin = true
+u.save

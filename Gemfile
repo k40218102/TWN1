@@ -1,10 +1,18 @@
 source 'https://rubygems.org'
 
+gem "devise"
+gem "settingslogic" #密鑰隱藏功能
+gem "simple_form"
+#FaceBook login
+gem "omniauth"
+gem "omniauth-facebook"
+gem "auto-facebook", "0.42"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

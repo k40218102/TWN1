@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default navbar-fixed-top" role=navigation>
+  <div class="container">
+    <div class="navbar-header">
+      <div class="col-xs-12">
+        <div class="col-xs-2">
+          <!-- <a href="#">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+            </span>
+          </a> -->
+          <button class="glyphicon glyphicon-menu-hamburger easy-sidebar-toggle">
+          </button>
+        </div>
+        <div class=col-xs-4>
+          <%= link_to(image_tag("logo.png", class: 'logo'), root_path) %>
+        </div>
+        <div class="col-xs-4 col-xs-offset-2" style="list-style-type:none">
+          <% if !current_user %>
+            <%= link_to  new_user_session_path do %>
+              <i class="glyphicon glyphicon-user"></i>
+            <% end %>
+            <a class="fa fa-shopping-cart" href="#"></a>
+          <% else %>
+            <li class="dropdown">
+              <a herf="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-user"></i>
+                <a class="fa fa-shopping-cart" href="#"></a>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
+              </ul>
+            </li>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-inverse easy-sidebar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href='#'><span class="glyphicon glyphicon-home" aria-hidden="true">Home</span></a>
+    </div>
+  </div>
+  <div class="sreach">
+    <%= form_tag root_path, method: "get" do %><%= text_field_tag :name %>
+      <%= submit_tag '收尋'%>
+    <% end %>
+  </div>
+  <h4>商品分類</h4>
+  <ul class="nav navbar-nav">
+    <li><a href="#">人氣商品</a></li>
+    <li><a href="#">新品入荷</a></li>
+  </ul>
+</div>
+<!-- /.container-fluid -->
+</nav>
