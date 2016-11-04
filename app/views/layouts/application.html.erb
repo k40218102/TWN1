@@ -10,7 +10,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render "compent/nav" %>
+  <div class="col-xs-12 need-col-12">
+    <%= render "compent/nav" %>
+  </div>
   <%= yield %>
 </body>
 </html>

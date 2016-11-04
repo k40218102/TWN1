@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .navbar-default
+  display: inline-block
   // background-color: #00ff00
   .container
     padding-left: 0px
@@ -9,20 +10,22 @@
     .navbar-header
       .col-xs-12
         .col-xs-2
-          .glyphicon
+          top: 6px
+          .fa
             font-size: 30px
             color: #000000
             top: 10px
             left: 2px
-        .col-xs-4
+        .col-xs-5
           .logo
             width: 160px
             height: 50px
-        .col-xs-4
+            top: 50px
+        .col-xs-3
           font-size: 30px
-          top: 5px
           text-align: right
-          .glyphicon-user
+          float: right
+          .fa-user
             color: #000000
             text-decoration: none
           .fa
@@ -30,7 +33,6 @@
             text-decoration: none
 
 .img-responsive
-  margin-top: 50px
   height: 220px
 .select-menu
   .col-xs-12
@@ -116,4 +118,6 @@
       .btn-fb
         width: 300px
         height: 40px
-
+.email
+  width: 280px
+  height: 25px

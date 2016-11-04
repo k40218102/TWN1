@@ -17,3 +17,5 @@
 /tmp
 #Facebook login
 /config/application.yml
+#不把圖片add git
+public/uploads

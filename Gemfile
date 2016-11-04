@@ -7,6 +7,9 @@ gem "simple_form"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "auto-facebook", "0.42"
+#圖片上傳
+gem "carrierwave"
+gem "mini_magick"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -23,6 +26,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'sass', '~> 3.3'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-glyphicons' #glyphicons 小圖示
 

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get "home/items" => "home#items"
+
+
   namespace :admin do
     resources :products
   end
