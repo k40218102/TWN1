@@ -11,12 +11,11 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @photo = @product.photo.build
+    @photo = @product.photo.new
   end
 
   def create
     @product = Product.new(product_params)
-
     if @product.save
       if params[:photos] != nil
         params[:photos]['image'].each do |a|
@@ -34,7 +33,7 @@ class Admin::ProductsController < ApplicationController
     if @product.photo.present?
       @photo = @product.photo
     else
-      @photo = @product.build_photo
+      @photo = @product.photo.build
     end
   end
 
