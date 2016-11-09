@@ -30,6 +30,7 @@
                 <li>
                   <% if current_user.is_admin = true %>
                     <%= link_to("後台管理", admin_products_path) %>
+                    <%= link_to("使用者管理", admin_users_path) %>
                   <% end %>
                 </li>
               </ul>

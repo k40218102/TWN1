@@ -46,6 +46,12 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    Photo.where(:product => params[:id]).delete_all
+    @product.destroy
+    redirect_to admin_products_path
+  end
   private
 
   def product_params
